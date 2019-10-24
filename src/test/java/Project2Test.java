@@ -36,7 +36,7 @@ public class Project2Test {
   public void project2() {
     driver.get("https://www.google.com/");
     driver.manage().window().setSize(new Dimension(1319, 1072));
-    driver.findElement(By.name("q")).sendKeys("AutomaAion");
+    driver.findElement(By.name("q")).sendKeys("Selenium - Web Browser AutomaAion");
     driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
     driver.findElement(By.cssSelector("i")).click();
     driver.findElement(By.cssSelector("div:nth-child(2) > .rc .LC20lb")).click();
