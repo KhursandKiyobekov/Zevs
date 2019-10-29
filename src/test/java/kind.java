@@ -1,5 +1,18 @@
 public class kind {
     String name;
-    byte age;
-    float weight;
+    int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    double weight;
 }
