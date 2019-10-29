@@ -4,8 +4,8 @@ public class Zoo {
         mykind.setName("myau");
         mykind.setAge(3);
         mykind.setWeight(5.5);
-        System.out.println("Name:\t" + mykind());
-        System.out.println("Age:\t" + mykind());
-        System.out.println("Weight:\t" + mykind());
+        System.out.println("Name:\t" + mykind.getName());
+        System.out.println("Age:\t" + mykind.getAge());
+        System.out.println("Weight:\t" + mykind.getWeight());
     }
 }
