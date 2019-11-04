@@ -15,12 +15,13 @@ public class Day7Test {
         Assert.assertEquals (true,"".isEmpty());
         Assert.assertEquals (4, "test".length());
         Assert.assertEquals ("test", "test".toLowerCase());
-        Assert.assertEquals ("test", "test".toUpperCase());
+        Assert.assertEquals ("TEST", "test".toUpperCase());
         Assert.assertArrayEquals("come back after 18", new int[18], new int[18]);
 
 
-
-
-    }
+        System.out.println("cool"+" place");
+        System.out.println(String.format("cool%s"," place"));
+        System.out.println("cool".concat(" place"));
+        System.out.println(String.format("%s%s","cool"," place"));    }
 
 }
