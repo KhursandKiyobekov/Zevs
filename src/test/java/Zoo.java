@@ -11,8 +11,6 @@ public class Zoo {
      System.out.println("Weight:\t" + mykind.getWeight());*/
 
 
-
-
 }
 
 
