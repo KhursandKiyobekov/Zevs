@@ -13,7 +13,14 @@ public class FindMaxTest {
      */
     public static int getMaxDigit(int[] digits) {
         int maxDigit = Integer.MIN_VALUE;
-//        Implementation goes here
+
+        for (int digit :digits) {
+            if (digit > maxDigit) {
+                maxDigit = digit;
+            }
+
+
+        } 
         return maxDigit;
     }
 
