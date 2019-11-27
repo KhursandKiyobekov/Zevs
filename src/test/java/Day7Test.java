@@ -22,6 +22,9 @@ public class Day7Test {
         System.out.println("cool"+" place");
         System.out.println(String.format("cool%s"," place"));
         System.out.println("cool".concat(" place"));
-        System.out.println(String.format("%s%s","cool"," place"));    }
+        System.out.println(String.format("%s%s","cool"," place"));
+        System.out.println(String.format("%s%x","5.5",9));
+
+    }
 
 }
