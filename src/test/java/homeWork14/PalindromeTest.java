@@ -15,18 +15,26 @@ public class PalindromeTest {
      */
     public static boolean isPalindrome(String word) {
         boolean isPalindrome = false;
+        String pureWordWithoutAnything = word.replaceAll("\\W+", "").toLowerCase();
+
+        String reversedWord = "";
+        char[] charArrayText = pureWordWithoutAnything.toCharArray();
+        for (int i = charArrayText.length -1; i >=0; i--) {
+            reversedWord += charArrayText[i];
+        };
+        isPalindrome = reversedWord.equals(pureWordWithoutAnything);
 //        Implementation goes here. If you want to use StringBuilder please add the second implementation of this method with loops! toCharArray
         return isPalindrome;
-    }
+    };
 
     @Test
     public void singleWordTest() {
         assertTrue(isPalindrome("madam"));
-        assertTrue(isPalindrome("racecar"));
-        assertTrue(isPalindrome("10801"));
+      assertTrue(isPalindrome("racecar"));
+      assertTrue(isPalindrome("10801"));
     }
 
-    @Test
+     @Test
     public void caseInsensitiveTest() {
         assertTrue(isPalindrome("oloLO"));
     }
@@ -50,4 +58,6 @@ public class PalindromeTest {
     public void emptyTextTest() {
         assertTrue(isPalindrome(""));
     }
-}
+
+
+};
