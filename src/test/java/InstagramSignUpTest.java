@@ -33,15 +33,15 @@ public class InstagramSignUpTest {
 //        Implementation goes here.
 
         {
-            By className = By.name("Instagram");
+            By className = By.xpath("//*[@id=\"react-root\"]/section/main/article/div[2]/div[1]/h1");
             driver.findElement(className);
-            By fullnameBar = By.name("Full Name");
+            By fullnameBar = By.name("fullName");
             driver.findElement(fullnameBar).sendKeys("0101");
-            By emailBar = By.name("Mobile Number or Email");
+            By emailBar = By.name("emailOrPhone");
             driver.findElement(emailBar).sendKeys("___@yahoo.com");
-            By userName= By.name("Username");
+            By userName= By.name("username");
             driver.findElement(userName).sendKeys("@@##@@");
-            By passwordBar = By.name("Password");
+            By passwordBar = By.name("password");
             driver.findElement(passwordBar).sendKeys("    ");
         }
     }
