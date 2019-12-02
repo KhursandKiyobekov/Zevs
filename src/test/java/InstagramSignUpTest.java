@@ -33,9 +33,9 @@ public class InstagramSignUpTest {
 //        Implementation goes here.
 
         {
-            By className = By.xpath("//*[@id=\"react-root\"]/section/main/article/div[2]/div[1]/h1");
-            driver.findElement(className);
-            System.out.println("Found element by xPath ");
+            By tagName = By.tagName("h1");
+            driver.findElement(tagName);
+            System.out.println("Found element by tagName");
             By fullnameBar = By.name("fullName");
             driver.findElement(fullnameBar).sendKeys("0101");
             By emailBar = By.name("emailOrPhone");
@@ -44,11 +44,8 @@ public class InstagramSignUpTest {
             driver.findElement(userName).sendKeys("@@##@@");
             By passwordBar = By.name("password");
             driver.findElement(passwordBar).sendKeys("    ");
+
+        assertEquals("Instagram", driver.findElement(By.tagName("h1")).getText());
         }
-    }
-
-    @Test
-    public static void main(String[] args) {
-
     }
 }
