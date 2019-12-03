@@ -36,13 +36,13 @@ public class InstagramSignUpTest {
             By tagName = By.tagName("h1");
             driver.findElement(tagName);
             System.out.println("Found element by tagName");
-            By fullnameBar = By.name("fullName");
+            By fullnameBar = By.name("FirstName LastName");
             driver.findElement(fullnameBar).sendKeys("0101");
             By emailBar = By.name("emailOrPhone");
-            driver.findElement(emailBar).sendKeys("___@yahoo.com");
-            By userName= By.name("username");
+            driver.findElement(emailBar).sendKeys("test@example.com");
+            By userName= By.name("someUsername");
             driver.findElement(userName).sendKeys("@@##@@");
-            By passwordBar = By.name("password");
+            By passwordBar = By.name("P@ssw0rd");
             driver.findElement(passwordBar).sendKeys("    ");
 
         assertEquals("Instagram", driver.findElement(By.tagName("h1")).getText());
