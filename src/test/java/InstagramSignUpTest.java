@@ -33,6 +33,8 @@ public class InstagramSignUpTest {
 //        Implementation goes here.
 
         {
+
+       /*
             By tagName = By.tagName("h1");
             driver.findElement(tagName);
             System.out.println("Found element by tagName");
@@ -44,8 +46,23 @@ public class InstagramSignUpTest {
             driver.findElement(userName).sendKeys("@@##@@");
             By passwordBar = By.name("P@ssw0rd");
             driver.findElement(passwordBar).sendKeys("    ");
+        */
+            By tagName = By.xpath("//*[@id=\"react-root\"]/section/main/article/div[2]/div[1]/h1");
+            driver.findElement(tagName);
+            System.out.println("Found element by xPath");
+            By fullnameBar = By.xpath("//*[@id=\"react-root\"]/section/main/article/div[2]/div[1]/div/form/div[4]/div/label/input");
+            driver.findElement(fullnameBar).sendKeys("Khursand Kiyobekov");
+            By emailBar = By.name("emailOrPhone");
+            driver.findElement(emailBar).sendKeys("test@example.com");
+            By userName= By.xpath("//*[@id=\"react-root\"]/section/main/article/div[2]/div[1]/div/form/div[5]/div/label/input");
+            driver.findElement(userName).sendKeys("khurs@nd");
+            By passwordBar = By.xpath("//*[@id=\"react-root\"]/section/main/article/div[2]/div[1]/div/form/div[6]/div/label/input");
+            driver.findElement(passwordBar).sendKeys("1A1a1@1.-");
+            By button = By.xpath("//*[@id=\"react-root\"]/section/main/article/div[2]/div[1]/div/form/div[7]/div/button");
+            driver.findElement(button).click();
 
-        assertEquals("Instagram", driver.findElement(By.tagName("h1")).getText());
+           assertEquals("Instagram", driver.findElement(tagName).getText());
+           //assertEquals("Full Name", driver.findElement(fullnameBar).getAttribute("Full Name"));
         }
     }
 }
